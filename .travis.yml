@@ -1,10 +1,12 @@
 language: java
 install: true
 
-#script:
-#  - git clone https://github.com/gradle/gradle-site-plugin.git
-#  - cd gradle-site-plugin
-#  - ./gradlew build
+os: linux
+dist: trusty
+jdk: oraclejdk8
+
+env:
+  - CI=true
 
 script:
   - ./gradlew build -x signArchives -s
@@ -16,3 +18,8 @@ cache:
   directories:
     - $HOME/.gradle/caches/modules-2/
     - $HOME/.gradle/wrapper/dists/
+    
+#script:
+#  - git clone https://github.com/gradle/gradle-site-plugin.git
+#  - cd gradle-site-plugin
+#  - ./gradlew build
