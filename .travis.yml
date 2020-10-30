@@ -1,2 +1,4 @@
 language: java
-gradle assemble
+script:
+- ./gradlew clean publish -i --continue
+- ./gradlew -b finalize.gradle finalize -i
