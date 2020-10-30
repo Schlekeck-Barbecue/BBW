@@ -1,4 +1,5 @@
 language: java
+install: true
 
 #script:
 #  - git clone https://github.com/gradle/gradle-site-plugin.git
