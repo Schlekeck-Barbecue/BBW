@@ -1,6 +1,17 @@
 language: java
 
+#script:
+#  - git clone https://github.com/gradle/gradle-site-plugin.git
+#  - cd gradle-site-plugin
+#  - ./gradlew build
+
 script:
-  - git clone https://github.com/gradle/gradle-site-plugin.git
-  - cd gradle-site-plugin
-  - ./gradlew build --stacktrace
+  - ./gradlew build -x signArchives -s
+
+before_cache:
+  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+
+cache:
+  directories:
+    - $HOME/.gradle/caches/modules-2/
+    - $HOME/.gradle/wrapper/dists/
