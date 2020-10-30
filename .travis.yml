@@ -1,2 +1,4 @@
 language: java
 install: ant deps
+deploy:
+  skip_cleanup: true
