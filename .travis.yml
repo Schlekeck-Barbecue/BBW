@@ -9,6 +9,8 @@ env:
   - CI=true
 
 script:
+  - git clone https://github.com/gradle/gradle-site-plugin.git
+  - cd gradle-site-plugin
   - ./gradlew build -x signArchives -s
 
 before_cache:
