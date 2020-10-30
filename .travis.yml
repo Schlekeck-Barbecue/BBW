@@ -3,4 +3,4 @@ language: java
 script:
   - git clone https://github.com/gradle/gradle-site-plugin.git
   - cd gradle-site-plugin
-  - ./gradlew build
+  - ./gradlew build --stacktrace
